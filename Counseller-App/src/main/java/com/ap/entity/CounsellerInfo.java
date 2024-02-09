@@ -43,6 +43,8 @@ public class CounsellerInfo {
 	@UpdateTimestamp
 	@Column(name = "updatedDate",insertable  = false)
 	private Date updatedDate;
+	
+	private boolean isactive;
 
 	public Long getCounsellerKey() {
 		return counsellerKey;
@@ -99,12 +101,23 @@ public class CounsellerInfo {
 	public void setUpdatedDate(Date updatedDate) {
 		this.updatedDate = updatedDate;
 	}
+	
+
+	public boolean isIsactive() {
+		return isactive;
+	}
+
+	public void setIsactive(boolean isactive) {
+		this.isactive = isactive;
+	}
 
 	@Override
 	public String toString() {
-		return "Counseller [counsellerKey=" + counsellerKey + ", name=" + name + ", email=" + email + ", password="
+		return "CounsellerInfo [counsellerKey=" + counsellerKey + ", name=" + name + ", email=" + email + ", password="
 				+ password + ", mobileNumber=" + mobileNumber + ", cretedDate=" + cretedDate + ", updatedDate="
-				+ updatedDate + "]";
+				+ updatedDate + ", isactive=" + isactive + "]";
 	}
+
+	
 
 }
