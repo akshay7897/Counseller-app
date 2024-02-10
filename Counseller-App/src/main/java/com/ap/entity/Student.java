@@ -1,6 +1,6 @@
 package com.ap.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -14,8 +14,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "student_enquiry")
@@ -52,11 +52,11 @@ public class Student {
 	
 	@CreationTimestamp
 	@Column(name = "createddate",updatable = false)
-	private Date createdDate;
+	private LocalDate createdDate;
 	
 	@UpdateTimestamp
 	@Column(name = "updatedDate",insertable  = false)
-	private Date updatedDate;
+	private LocalDate updatedDate;
 	
 	private Boolean isactive;
 
@@ -100,19 +100,19 @@ public class Student {
 		this.email = email;
 	}
 
-	public Date getCreatedDate() {
+	public LocalDate getCreatedDate() {
 		return createdDate;
 	}
 
-	public void setCreatedDate(Date createdDate) {
+	public void setCreatedDate(LocalDate createdDate) {
 		this.createdDate = createdDate;
 	}
 
-	public Date getUpdatedDate() {
+	public LocalDate getUpdatedDate() {
 		return updatedDate;
 	}
 
-	public void setUpdatedDate(Date updatedDate) {
+	public void setUpdatedDate(LocalDate updatedDate) {
 		this.updatedDate = updatedDate;
 	}
 

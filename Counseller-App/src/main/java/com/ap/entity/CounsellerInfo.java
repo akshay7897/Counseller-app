@@ -1,6 +1,6 @@
 package com.ap.entity;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -38,11 +38,11 @@ public class CounsellerInfo {
 
 	@CreationTimestamp
 	@Column(name = "createddate",updatable = false)
-	private Date cretedDate;
+	private LocalDate cretedDate;
 
 	@UpdateTimestamp
 	@Column(name = "updatedDate",insertable  = false)
-	private Date updatedDate;
+	private LocalDate updatedDate;
 	
 	private boolean isactive;
 
@@ -86,19 +86,19 @@ public class CounsellerInfo {
 		this.mobileNumber = mobileNumber;
 	}
 
-	public Date getCretedDate() {
+	public LocalDate getCretedDate() {
 		return cretedDate;
 	}
 
-	public void setCretedDate(Date cretedDate) {
+	public void setCretedDate(LocalDate cretedDate) {
 		this.cretedDate = cretedDate;
 	}
 
-	public Date getUpdatedDate() {
+	public LocalDate getUpdatedDate() {
 		return updatedDate;
 	}
 
-	public void setUpdatedDate(Date updatedDate) {
+	public void setUpdatedDate(LocalDate updatedDate) {
 		this.updatedDate = updatedDate;
 	}
 	
