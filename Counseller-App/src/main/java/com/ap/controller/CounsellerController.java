@@ -42,13 +42,14 @@ public class CounsellerController {
 	public String login(LoginForm loginForm, Model model) {
 		logger.info("Start login method .");
 		CounsellerResponse response = counsellerService.login(loginForm);
-		if (!ObjectUtils.isEmpty(response)) {
+		if (!ObjectUtils.isEmpty(response)&& null!=response.getEmail()) {
 			model.addAttribute("msg", "Login Successfully");
 
 			logger.info("End login method with dashboard..");
 			return "redirect:dashboard";
 		}
 		model.addAttribute("msg", "Invalid Credentials..");
+		model.addAttribute("loginform", new LoginForm());
 		logger.info("End login method with invalid credentials.");
 		return "login";
 	}
@@ -67,15 +68,11 @@ public class CounsellerController {
 	public String counsellerRegistration(CounsellerRequest counsellerRequest, Model model) {
 		logger.info("Start counsellerRegistration method with Request :{}",counsellerRequest);
 
-		boolean savedcounseller = counsellerService.saveCounseller(counsellerRequest);
-		if (savedcounseller) {
-			model.addAttribute("msg", "Counseller Registered Successfully..");
+		String msg = counsellerService.saveCounseller(counsellerRequest);
+		model.addAttribute("msg", msg);
 
-		} else {
-			model.addAttribute("msg", "Counseller Registration Failed...");
-		}
-	    model.addAttribute("counseller", new CounsellerRequest());
-		logger.info("end counsellerRegistration method with Response :{}",savedcounseller);
+		 model.addAttribute("counseller", new CounsellerRequest());
+		logger.info("end counsellerRegistration method with Response :{}",msg);
 		return "registerconseller";
 	}
 

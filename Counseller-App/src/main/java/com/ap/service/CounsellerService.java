@@ -7,7 +7,7 @@ import com.ap.dtos.LoginForm;
 
 public interface CounsellerService {
 	
-	boolean saveCounseller(CounsellerRequest counsellerRequest);
+	String saveCounseller(CounsellerRequest counsellerRequest);
 	
 	CounsellerResponse login(LoginForm loginForm);
 	
