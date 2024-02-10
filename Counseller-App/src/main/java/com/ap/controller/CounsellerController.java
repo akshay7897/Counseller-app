@@ -7,12 +7,13 @@ import org.springframework.ui.Model;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.ap.dtos.CounsellerDashboard;
 import com.ap.dtos.CounsellerRequest;
 import com.ap.dtos.CounsellerResponse;
 import com.ap.dtos.LoginForm;
+import com.ap.dtos.SearchCriteria;
 import com.ap.service.CounsellerService;
 
 @Controller
@@ -34,11 +35,11 @@ public class CounsellerController {
 		model.addAttribute("loginform", new LoginForm());
 
 		logger.info("End indexPage method .");
-		return "loginView";
+		return "login";
 	}
 
 	@PostMapping("/login")
-	public String login(@RequestBody LoginForm loginForm, Model model) {
+	public String login(LoginForm loginForm, Model model) {
 		logger.info("Start login method .");
 		CounsellerResponse response = counsellerService.login(loginForm);
 		if (!ObjectUtils.isEmpty(response)) {
@@ -49,21 +50,21 @@ public class CounsellerController {
 		}
 		model.addAttribute("msg", "Invalid Credentials..");
 		logger.info("End login method with invalid credentials.");
-		return "loginView";
+		return "login";
 	}
 
 	@GetMapping("/register")
 	public String counsellerRegistrationPage(Model model) {
 		logger.info("Start counsellerRegistrationPage method .");
 
-		model.addAttribute("counsellerInfo", new CounsellerRequest());
+		model.addAttribute("counseller", new CounsellerRequest());
 		
 		logger.info("Start counsellerRegistrationPage method .");
-		return "counsellerVeiw";
+		return "registerconseller";
 	}
 
 	@PostMapping("/register")
-	public String counsellerRegistration(@RequestBody CounsellerRequest counsellerRequest, Model model) {
+	public String counsellerRegistration(CounsellerRequest counsellerRequest, Model model) {
 		logger.info("Start counsellerRegistration method with Request :{}",counsellerRequest);
 
 		boolean savedcounseller = counsellerService.saveCounseller(counsellerRequest);
@@ -73,8 +74,9 @@ public class CounsellerController {
 		} else {
 			model.addAttribute("msg", "Counseller Registration Failed...");
 		}
+	    model.addAttribute("counseller", new CounsellerRequest());
 		logger.info("end counsellerRegistration method with Response :{}",savedcounseller);
-		return "counsellerVeiw";
+		return "registerconseller";
 	}
 
 	@GetMapping("/forgotpassword")
@@ -95,6 +97,22 @@ public class CounsellerController {
 		}
 		logger.info("End forgotPassword method with email :{}",email);
 		return "forgotPasswordView";
+	}
+	
+	@GetMapping("/dashboard")
+	public String dashboardPage(Model model) {
+		
+		model.addAttribute("serchCriteria", new SearchCriteria());
+		
+		
+		return "dashboardView";
+	}
+	
+	@PostMapping("/dashboard")
+	public String dashboard(CounsellerDashboard counsellerDashboard,Model model) {
+		model.addAttribute("serchCriteria", new SearchCriteria());
+
+		return "dashboardView";
 	}
 
 }
