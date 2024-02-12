@@ -2,28 +2,26 @@ package com.ap.dtos;
 
 public class CounsellerDashboard {
 	
-	private String name;
+	private Integer total;
 	private Integer enrolledCount;
 	private Integer lostCount;
 	
 	public CounsellerDashboard() {
 		// 
 	}
-
-	public CounsellerDashboard(String name, Integer enrolledCount, Integer lostCount) {
-		this.name = name;
+	public CounsellerDashboard(Integer total, Integer enrolledCount, Integer lostCount) {
+		super();
+		this.total = total;
 		this.enrolledCount = enrolledCount;
 		this.lostCount = lostCount;
 	}
 
-	public String getName() {
-		return name;
+	public Integer getTotal() {
+		return total;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setTotal(Integer total) {
+		this.total = total;
 	}
-
 	public Integer getEnrolledCount() {
 		return enrolledCount;
 	}
@@ -42,9 +40,11 @@ public class CounsellerDashboard {
 
 	@Override
 	public String toString() {
-		return "CounsellerDashboard [name=" + name + ", enrolledCount=" + enrolledCount + ", lostCount=" + lostCount
+		return "CounsellerDashboard [total=" + total + ", enrolledCount=" + enrolledCount + ", lostCount=" + lostCount
 				+ "]";
 	}
+
+	
 	
 	
 

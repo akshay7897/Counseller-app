@@ -1,45 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Counselor-App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body>
-	  <div class="container">
-    <h1>LOGIN HERE</h1>
-    
-    	 <p color="red" th:text="${msg}"/>
-        <form th:action="@{/login}" th:object="${loginform}" th:method="post">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
 
-    <table>
-		
-		<tr>
-			<td>Email : </td>
-			<td><input type="email" placeholder="Enter Email Here..." th:field="*{email}" required/></td>
-		</tr>
-		
-		<tr>
-			<td>Password : </td>
-			<td><input type="password" placeholder="Enter Email Here..." th:field="*{password}" required/></td>
-		</tr>
-		<tr>
-			<td><input type="submit" value="Login" class="btn btn-primary" required /></td>
-		</tr>
-		
-		<tr>
-			<td>
-				<a href="register">Register Here</a>
-			</td>
-			<td>
-				<a href="forgotpassword">Forget Password</a>
-			</td>
-		</tr>
-	</table>
-        </form>
-    
+        .container {
+            margin-top: 50px;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            transition: border-color 0.3s;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .invalid-feedback {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h1><b><u>LOGIN HERE</u></b></h1>
+            <font color="red"><p th:text="${msg}"/></font>
+            <form th:action="@{/login}" th:object="${loginform}" th:method="post">
+                <div class="mb-3">
+                    <label for="inputEmail">Email :</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email Here..." th:field="*{email}" required>
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Invalid email.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword">Password :</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password Here..." th:field="*{password}" required>
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Invalid password.</div>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" value="Login" class="btn btn-primary" required>
+                </div>
+                <div class="mb-3">
+                    <a href="register">Register Here</a> |
+                    <a href="recoverpassword">Forget Password</a>
+                </div>
+            </form>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

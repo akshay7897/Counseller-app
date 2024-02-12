@@ -16,6 +16,9 @@ import com.ap.dtos.LoginForm;
 import com.ap.dtos.SearchCriteria;
 import com.ap.service.CounsellerService;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class CounsellerController {
 
@@ -39,11 +42,14 @@ public class CounsellerController {
 	}
 
 	@PostMapping("/login")
-	public String login(LoginForm loginForm, Model model) {
+	public String login(LoginForm loginForm,HttpServletRequest request, Model model) {
 		logger.info("Start login method .");
 		CounsellerResponse response = counsellerService.login(loginForm);
 		if (!ObjectUtils.isEmpty(response)&& null!=response.getEmail()) {
 			model.addAttribute("msg", "Login Successfully");
+			
+			HttpSession session = request.getSession(true);
+			session.setAttribute("cid", response.getCounsellerKey());
 
 			logger.info("End login method with dashboard..");
 			return "redirect:dashboard";
@@ -76,40 +82,42 @@ public class CounsellerController {
 		return "registerconseller";
 	}
 
-	@GetMapping("/forgotpassword")
+	@GetMapping("/recoverpassword")
 	public String forgotPasswordPage(Model model) {
 		logger.info("Start forgotPasswordPage method .");
 		return "forgotPasswordView";
 	}
 
-	@PostMapping("/forgotpassword")
+	@PostMapping("/recoverpassword")
 	public String forgotPassword(@RequestParam String email, Model model) {
 		logger.info("Start forgotPassword method with email :{}",email);
 
 		boolean status = counsellerService.forgotPassword(email);
 		if (status) {
-			model.addAttribute("msg", "Password Sent To Email ID Plz Check..");
+			model.addAttribute("msg", "Password Sent To Email ID Please Check..");
 		} else {
-			model.addAttribute("msg", "Provided Email Is Invalid..");
+			model.addAttribute("msg", "Provided Email Id Is Invalid..");
 		}
 		logger.info("End forgotPassword method with email :{}",email);
 		return "forgotPasswordView";
 	}
 	
 	@GetMapping("/dashboard")
-	public String dashboardPage(Model model) {
-		
-		model.addAttribute("serchCriteria", new SearchCriteria());
-		
+	public String dashboardPage(HttpServletRequest request,Model model) {
+		HttpSession session = request.getSession(false);
+		Object obj = session.getAttribute("cid");
+		Long cid=(Long)obj;
+		CounsellerDashboard counsellerDashboard = counsellerService.fetchCounsellerDetails(cid);
+		model.addAttribute("counsellerDashboard", counsellerDashboard);
 		
 		return "dashboardView";
 	}
 	
-	@PostMapping("/dashboard")
-	public String dashboard(CounsellerDashboard counsellerDashboard,Model model) {
-		model.addAttribute("serchCriteria", new SearchCriteria());
-
-		return "dashboardView";
-	}
+//	@PostMapping("/dashboard")
+//	public String dashboard(CounsellerDashboard counsellerDashboard,Model model) {
+//		model.addAttribute("serchCriteria", new SearchCriteria());
+//
+//		return "dashboardView";
+//	}
 
 }

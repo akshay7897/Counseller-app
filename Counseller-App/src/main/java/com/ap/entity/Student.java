@@ -33,7 +33,6 @@ public class Student {
 	@NotBlank(message = "Please Enter Correct City ")
 	private String city;
 	
-	@NotBlank(message = "Please Enter Correct Mobile Number")
 	private Long mobileNo;
 	
 	@Email(message = "Please Enter Correct Email Address ")
