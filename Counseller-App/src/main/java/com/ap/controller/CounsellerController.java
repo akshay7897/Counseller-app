@@ -113,11 +113,5 @@ public class CounsellerController {
 		return "dashboardView";
 	}
 	
-//	@PostMapping("/dashboard")
-//	public String dashboard(CounsellerDashboard counsellerDashboard,Model model) {
-//		model.addAttribute("serchCriteria", new SearchCriteria());
-//
-//		return "dashboardView";
-//	}
 
 }

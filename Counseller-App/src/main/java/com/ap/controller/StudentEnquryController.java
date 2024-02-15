@@ -1,5 +1,7 @@
 package com.ap.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.ap.dtos.SearchCriteria;
 import com.ap.dtos.StudentEnquryRequest;
+import com.ap.dtos.StudentEnquryResponse;
 import com.ap.service.StudentService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -23,7 +26,7 @@ public class StudentEnquryController {
 
 	@GetMapping("/enqury")
 	public String addEnquryPage(Model model) {
-		model.addAttribute("enqury", new StudentEnquryRequest());
+		model.addAttribute("enquiry", new StudentEnquryRequest());
 		return "enquryView";
 	}
 	
@@ -36,19 +39,23 @@ public class StudentEnquryController {
 		}else {
 		model.addAttribute("msg", "Student Enqury Not Added .");
 		}
-		model.addAttribute("enqury", new StudentEnquryRequest());
+		model.addAttribute("enquiry", new StudentEnquryRequest());
 		return "enquryView";
 	}
 	
     @GetMapping("/filter")
-	public String filterSerchPage(Model model) {
+	public String filterSerchPage(Model model,HttpServletRequest request) {
+    	List<StudentEnquryResponse> allEnquries = studentService.fetchAllEnquries(request);
+    	model.addAttribute("allEnquries", allEnquries);
     	model.addAttribute("serch", new SearchCriteria());
 		return "filterPage";
 	}
 	
     @PostMapping("/serch")
-	public String filterSerch(SearchCriteria searchCriteria,Model model) {
-    	
+	public String filterSerch(SearchCriteria searchCriteria,Model model,HttpServletRequest request) {
+    	List<StudentEnquryResponse> allEnquries = studentService.fetchAllEnquries(searchCriteria,request);
+    	model.addAttribute("serch", new SearchCriteria());
+    	model.addAttribute("allEnquries", allEnquries);
 		return "filterPage";
 	}
 	

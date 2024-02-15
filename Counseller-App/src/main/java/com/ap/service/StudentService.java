@@ -12,6 +12,8 @@ public interface StudentService {
 	
 	boolean addStudentEnquries(StudentEnquryRequest studentEnquryRequest,HttpServletRequest request);
 	
-	List<StudentEnquryResponse> fetchAllEnquries(SearchCriteria searchCriteria);
+	List<StudentEnquryResponse> fetchAllEnquries(HttpServletRequest request);
+	
+	List<StudentEnquryResponse> fetchAllEnquries(SearchCriteria searchCriteria ,HttpServletRequest request);
 
 }

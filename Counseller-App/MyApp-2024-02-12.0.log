@@ -1,0 +1,291 @@
+2024-02-12 22:26:53,337 [background-preinit] INFO  o.h.validator.internal.util.Version                - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-12 22:26:53,357 [main] INFO  com.ap.CounsellerAppApplication                    - Starting CounsellerAppApplication using Java 17.0.10 with PID 51442 (/Users/akshaypatil13/git/Counseller-app/Counseller-App/target/classes started by akshaypatil13 in /Users/akshaypatil13/git/Counseller-app/Counseller-App)
+2024-02-12 22:26:53,357 [main] INFO  com.ap.CounsellerAppApplication                    - No active profile set, falling back to 1 default profile: "default"
+2024-02-12 22:26:53,721 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12 22:26:53,749 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2024-02-12 22:26:53,943 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 9090 (http)
+2024-02-12 22:26:53,946 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:26:53,947 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2024-02-12 22:26:53,947 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-12 22:26:53,989 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2024-02-12 22:26:53,990 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 614 ms
+2024-02-12 22:26:54,003 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Starting...
+2024-02-12 22:26:54,080 [main] INFO  com.zaxxer.hikari.pool.HikariPool                  - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=ADMIN
+2024-02-12 22:26:54,081 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Start completed.
+2024-02-12 22:26:54,090 [main] INFO  o.s.b.a.h2.H2ConsoleAutoConfiguration              - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test'
+2024-02-12 22:26:54,141 [main] INFO  o.hibernate.jpa.internal.util.LogHelper            - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12 22:26:54,165 [main] INFO  org.hibernate.Version                              - HHH000412: Hibernate ORM core version 6.2.20.Final
+2024-02-12 22:26:54,167 [main] INFO  org.hibernate.cfg.Environment                      - HHH000406: Using bytecode reflection optimizer
+2024-02-12 22:26:54,266 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12 22:26:54,283 [main] WARN  org.hibernate.orm.deprecation                      - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-12 22:26:54,575 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12 22:26:54,592 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12 22:26:54,727 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-12 22:26:54,852 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:26:54,859 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 9090 (http) with context path ''
+2024-02-12 22:26:54,863 [main] INFO  com.ap.CounsellerAppApplication                    - Started CounsellerAppApplication in 1.625 seconds (process running for 2.324)
+2024-02-12 22:27:07,736 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-12 22:27:07,736 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Initializing Servlet 'dispatcherServlet'
+2024-02-12 22:27:07,740 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Completed initialization in 3 ms
+2024-02-12 22:27:07,779 [http-nio-9090-exec-1] INFO  com.ap.controller.CounsellerController             - Start indexPage method .
+2024-02-12 22:27:07,780 [http-nio-9090-exec-1] INFO  com.ap.controller.CounsellerController             - End indexPage method .
+2024-02-12 22:27:10,030 [http-nio-9090-exec-4] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistrationPage method .
+2024-02-12 22:27:10,030 [http-nio-9090-exec-4] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistrationPage method .
+2024-02-12 22:27:17,485 [http-nio-9090-exec-7] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistration method with Request :CounsellerRequest [counsellerKey=null, name=akshay patil, email=akshaypatil07081997@gmail.com, password=akshay@143, mobileNumber=9130804535, isactive=false]
+2024-02-12 22:27:17,611 [http-nio-9090-exec-7] INFO  com.ap.controller.CounsellerController             - end counsellerRegistration method with Response :Record Saved Successfully ...!
+2024-02-12 22:27:19,102 [http-nio-9090-exec-10] INFO  com.ap.controller.CounsellerController             - Start indexPage method .
+2024-02-12 22:27:19,102 [http-nio-9090-exec-10] INFO  com.ap.controller.CounsellerController             - End indexPage method .
+2024-02-12 22:27:22,535 [http-nio-9090-exec-1] INFO  com.ap.controller.CounsellerController             - Start login method .
+2024-02-12 22:27:22,562 [http-nio-9090-exec-1] INFO  com.ap.controller.CounsellerController             - End login method with dashboard..
+2024-02-12 22:28:58,212 [RMI TCP Connection(6)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-02-12 22:28:58,233 [RMI TCP Connection(6)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:28:58,233 [RMI TCP Connection(6)-127.0.0.1] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2024-02-12 22:28:58,235 [RMI TCP Connection(6)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-02-12 22:28:58,239 [RMI TCP Connection(6)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:28:58,250 [RMI TCP Connection(6)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12 22:28:58,464 [RMI TCP Connection(6)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown initiated...
+2024-02-12 22:28:58,471 [RMI TCP Connection(6)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown completed.
+2024-02-12 22:28:59,801 [background-preinit] INFO  o.h.validator.internal.util.Version                - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-12 22:28:59,816 [main] INFO  com.ap.CounsellerAppApplication                    - Starting CounsellerAppApplication using Java 17.0.10 with PID 51504 (/Users/akshaypatil13/git/Counseller-app/Counseller-App/target/classes started by akshaypatil13 in /Users/akshaypatil13/git/Counseller-app/Counseller-App)
+2024-02-12 22:28:59,817 [main] INFO  com.ap.CounsellerAppApplication                    - No active profile set, falling back to 1 default profile: "default"
+2024-02-12 22:29:00,131 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12 22:29:00,194 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2024-02-12 22:29:00,401 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 9090 (http)
+2024-02-12 22:29:00,404 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:29:00,405 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2024-02-12 22:29:00,405 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-12 22:29:00,444 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2024-02-12 22:29:00,444 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 610 ms
+2024-02-12 22:29:00,456 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Starting...
+2024-02-12 22:29:00,546 [main] INFO  com.zaxxer.hikari.pool.HikariPool                  - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=ADMIN
+2024-02-12 22:29:00,547 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Start completed.
+2024-02-12 22:29:00,552 [main] INFO  o.s.b.a.h2.H2ConsoleAutoConfiguration              - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test'
+2024-02-12 22:29:00,607 [main] INFO  o.hibernate.jpa.internal.util.LogHelper            - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12 22:29:00,633 [main] INFO  org.hibernate.Version                              - HHH000412: Hibernate ORM core version 6.2.20.Final
+2024-02-12 22:29:00,634 [main] INFO  org.hibernate.cfg.Environment                      - HHH000406: Using bytecode reflection optimizer
+2024-02-12 22:29:00,729 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12 22:29:00,747 [main] WARN  org.hibernate.orm.deprecation                      - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-12 22:29:01,074 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12 22:29:01,090 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12 22:29:01,236 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-12 22:29:01,367 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:29:01,375 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 9090 (http) with context path ''
+2024-02-12 22:29:01,379 [main] INFO  com.ap.CounsellerAppApplication                    - Started CounsellerAppApplication in 1.676 seconds (process running for 2.209)
+2024-02-12 22:29:08,303 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-12 22:29:08,303 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Initializing Servlet 'dispatcherServlet'
+2024-02-12 22:29:08,305 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Completed initialization in 2 ms
+2024-02-12 22:29:08,328 [http-nio-9090-exec-1] ERROR o.a.c.c.C.[.[.[/].[dispatcherServlet]              - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "jakarta.servlet.http.HttpSession.getAttribute(String)" because "session" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "jakarta.servlet.http.HttpSession.getAttribute(String)" because "session" is null
+	at com.ap.controller.CounsellerController.dashboardPage(CounsellerController.java:108)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-02-12 22:29:14,172 [http-nio-9090-exec-4] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistrationPage method .
+2024-02-12 22:29:14,173 [http-nio-9090-exec-4] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistrationPage method .
+2024-02-12 22:29:18,792 [http-nio-9090-exec-7] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistration method with Request :CounsellerRequest [counsellerKey=null, name=akshay patil, email=akshaypatil07081997@gmail.com, password=akshay@143, mobileNumber=9130804535, isactive=false]
+2024-02-12 22:29:18,913 [http-nio-9090-exec-7] INFO  com.ap.controller.CounsellerController             - end counsellerRegistration method with Response :Record Saved Successfully ...!
+2024-02-12 22:29:20,882 [http-nio-9090-exec-8] INFO  com.ap.controller.CounsellerController             - Start indexPage method .
+2024-02-12 22:29:20,883 [http-nio-9090-exec-8] INFO  com.ap.controller.CounsellerController             - End indexPage method .
+2024-02-12 22:29:22,098 [http-nio-9090-exec-9] INFO  com.ap.controller.CounsellerController             - Start login method .
+2024-02-12 22:29:22,126 [http-nio-9090-exec-9] INFO  com.ap.controller.CounsellerController             - End login method with dashboard..
+2024-02-12 22:29:50,010 [RMI TCP Connection(6)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-02-12 22:29:51,044 [RMI TCP Connection(6)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:29:51,045 [RMI TCP Connection(6)-127.0.0.1] WARN  org.apache.tomcat.util.net.NioEndpoint             - Failed to unlock acceptor for [http-nio-9090] because the local address was not available
+2024-02-12 22:29:51,045 [RMI TCP Connection(6)-127.0.0.1] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2024-02-12 22:29:51,045 [http-nio-9090-Acceptor] ERROR org.apache.tomcat.util.net.Acceptor                - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:376)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:399)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:521)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:79)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:128)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-02-12 22:29:51,046 [RMI TCP Connection(6)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-02-12 22:29:51,049 [RMI TCP Connection(6)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:29:51,052 [RMI TCP Connection(6)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12 22:29:51,260 [RMI TCP Connection(6)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown initiated...
+2024-02-12 22:29:51,268 [RMI TCP Connection(6)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown completed.
+2024-02-12 22:29:52,196 [background-preinit] INFO  o.h.validator.internal.util.Version                - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-12 22:29:52,211 [main] INFO  com.ap.CounsellerAppApplication                    - Starting CounsellerAppApplication using Java 17.0.10 with PID 51547 (/Users/akshaypatil13/git/Counseller-app/Counseller-App/target/classes started by akshaypatil13 in /Users/akshaypatil13/git/Counseller-app/Counseller-App)
+2024-02-12 22:29:52,211 [main] INFO  com.ap.CounsellerAppApplication                    - No active profile set, falling back to 1 default profile: "default"
+2024-02-12 22:29:52,434 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12 22:29:52,460 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-02-12 22:29:52,632 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 9090 (http)
+2024-02-12 22:29:52,635 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:29:52,636 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2024-02-12 22:29:52,636 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-12 22:29:52,668 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2024-02-12 22:29:52,668 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 442 ms
+2024-02-12 22:29:52,679 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Starting...
+2024-02-12 22:29:52,755 [main] INFO  com.zaxxer.hikari.pool.HikariPool                  - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=ADMIN
+2024-02-12 22:29:52,756 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Start completed.
+2024-02-12 22:29:52,765 [main] INFO  o.s.b.a.h2.H2ConsoleAutoConfiguration              - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test'
+2024-02-12 22:29:52,811 [main] INFO  o.hibernate.jpa.internal.util.LogHelper            - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12 22:29:52,830 [main] INFO  org.hibernate.Version                              - HHH000412: Hibernate ORM core version 6.2.20.Final
+2024-02-12 22:29:52,831 [main] INFO  org.hibernate.cfg.Environment                      - HHH000406: Using bytecode reflection optimizer
+2024-02-12 22:29:52,912 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12 22:29:52,928 [main] WARN  org.hibernate.orm.deprecation                      - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-12 22:29:53,222 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12 22:29:53,239 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12 22:29:53,382 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-12 22:29:53,504 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:29:53,510 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 9090 (http) with context path ''
+2024-02-12 22:29:53,514 [main] INFO  com.ap.CounsellerAppApplication                    - Started CounsellerAppApplication in 1.402 seconds (process running for 1.654)
+2024-02-12 22:29:58,917 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-12 22:29:58,918 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Initializing Servlet 'dispatcherServlet'
+2024-02-12 22:29:58,920 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Completed initialization in 2 ms
+2024-02-12 22:29:58,944 [http-nio-9090-exec-1] ERROR o.a.c.c.C.[.[.[/].[dispatcherServlet]              - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "jakarta.servlet.http.HttpSession.getAttribute(String)" because "session" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "jakarta.servlet.http.HttpSession.getAttribute(String)" because "session" is null
+	at com.ap.controller.CounsellerController.dashboardPage(CounsellerController.java:108)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-02-12 22:30:02,020 [http-nio-9090-exec-2] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistrationPage method .
+2024-02-12 22:30:02,021 [http-nio-9090-exec-2] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistrationPage method .
+2024-02-12 22:30:06,246 [http-nio-9090-exec-5] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistration method with Request :CounsellerRequest [counsellerKey=null, name=akshay patil, email=akshaypatil07081997@gmail.com, password=akshay@143, mobileNumber=9130804535, isactive=false]
+2024-02-12 22:30:06,368 [http-nio-9090-exec-5] INFO  com.ap.controller.CounsellerController             - end counsellerRegistration method with Response :Record Saved Successfully ...!
+2024-02-12 22:30:07,584 [http-nio-9090-exec-6] INFO  com.ap.controller.CounsellerController             - Start indexPage method .
+2024-02-12 22:30:07,584 [http-nio-9090-exec-6] INFO  com.ap.controller.CounsellerController             - End indexPage method .
+2024-02-12 22:30:09,756 [http-nio-9090-exec-9] INFO  com.ap.controller.CounsellerController             - Start login method .
+2024-02-12 22:30:09,784 [http-nio-9090-exec-9] INFO  com.ap.controller.CounsellerController             - End login method with dashboard..
+2024-02-12 22:30:27,475 [RMI TCP Connection(6)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2024-02-12 22:30:27,492 [RMI TCP Connection(6)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Pausing ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:30:27,492 [RMI TCP Connection(6)-127.0.0.1] INFO  o.apache.catalina.core.StandardService             - Stopping service [Tomcat]
+2024-02-12 22:30:27,494 [RMI TCP Connection(6)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-02-12 22:30:27,497 [RMI TCP Connection(6)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Stopping ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:30:27,499 [RMI TCP Connection(6)-127.0.0.1] INFO  o.apache.coyote.http11.Http11NioProtocol           - Destroying ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:30:27,502 [RMI TCP Connection(6)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12 22:30:27,707 [RMI TCP Connection(6)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown initiated...
+2024-02-12 22:30:27,716 [RMI TCP Connection(6)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Shutdown completed.
+2024-02-12 22:30:28,676 [background-preinit] INFO  o.h.validator.internal.util.Version                - HV000001: Hibernate Validator 8.0.1.Final
+2024-02-12 22:30:28,689 [main] INFO  com.ap.CounsellerAppApplication                    - Starting CounsellerAppApplication using Java 17.0.10 with PID 51566 (/Users/akshaypatil13/git/Counseller-app/Counseller-App/target/classes started by akshaypatil13 in /Users/akshaypatil13/git/Counseller-app/Counseller-App)
+2024-02-12 22:30:28,690 [main] INFO  com.ap.CounsellerAppApplication                    - No active profile set, falling back to 1 default profile: "default"
+2024-02-12 22:30:28,911 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-12 22:30:28,943 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate          - Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
+2024-02-12 22:30:29,114 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat initialized with port(s): 9090 (http)
+2024-02-12 22:30:29,117 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Initializing ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:30:29,118 [main] INFO  o.apache.catalina.core.StandardService             - Starting service [Tomcat]
+2024-02-12 22:30:29,118 [main] INFO  org.apache.catalina.core.StandardEngine            - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-12 22:30:29,154 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring embedded WebApplicationContext
+2024-02-12 22:30:29,154 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext     - Root WebApplicationContext: initialization completed in 450 ms
+2024-02-12 22:30:29,165 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Starting...
+2024-02-12 22:30:29,230 [main] INFO  com.zaxxer.hikari.pool.HikariPool                  - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=ADMIN
+2024-02-12 22:30:29,231 [main] INFO  com.zaxxer.hikari.HikariDataSource                 - HikariPool-1 - Start completed.
+2024-02-12 22:30:29,240 [main] INFO  o.s.b.a.h2.H2ConsoleAutoConfiguration              - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test'
+2024-02-12 22:30:29,288 [main] INFO  o.hibernate.jpa.internal.util.LogHelper            - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-12 22:30:29,308 [main] INFO  org.hibernate.Version                              - HHH000412: Hibernate ORM core version 6.2.20.Final
+2024-02-12 22:30:29,309 [main] INFO  org.hibernate.cfg.Environment                      - HHH000406: Using bytecode reflection optimizer
+2024-02-12 22:30:29,391 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo                - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-12 22:30:29,406 [main] WARN  org.hibernate.orm.deprecation                      - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-02-12 22:30:29,690 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator                 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-12 22:30:29,706 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean     - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-12 22:30:29,838 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-12 22:30:29,958 [main] INFO  o.apache.coyote.http11.Http11NioProtocol           - Starting ProtocolHandler ["http-nio-9090"]
+2024-02-12 22:30:29,964 [main] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer            - Tomcat started on port(s): 9090 (http) with context path ''
+2024-02-12 22:30:29,969 [main] INFO  com.ap.CounsellerAppApplication                    - Started CounsellerAppApplication in 1.382 seconds (process running for 1.649)
+2024-02-12 22:31:22,527 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]                 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-12 22:31:22,529 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Initializing Servlet 'dispatcherServlet'
+2024-02-12 22:31:22,534 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet                  - Completed initialization in 5 ms
+2024-02-12 22:31:22,561 [http-nio-9090-exec-1] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistrationPage method .
+2024-02-12 22:31:22,561 [http-nio-9090-exec-1] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistrationPage method .
+2024-02-12 22:31:34,608 [http-nio-9090-exec-4] INFO  com.ap.controller.CounsellerController             - Start counsellerRegistration method with Request :CounsellerRequest [counsellerKey=null, name=akshay patil, email=akshaypatil07081997@gmail.com, password=akshay@143, mobileNumber=9130804535, isactive=false]
+2024-02-12 22:31:34,725 [http-nio-9090-exec-4] INFO  com.ap.controller.CounsellerController             - end counsellerRegistration method with Response :Record Saved Successfully ...!
+2024-02-12 22:31:35,822 [http-nio-9090-exec-5] INFO  com.ap.controller.CounsellerController             - Start indexPage method .
+2024-02-12 22:31:35,823 [http-nio-9090-exec-5] INFO  com.ap.controller.CounsellerController             - End indexPage method .
+2024-02-12 22:31:37,791 [http-nio-9090-exec-6] INFO  com.ap.controller.CounsellerController             - Start login method .
+2024-02-12 22:31:37,818 [http-nio-9090-exec-6] INFO  com.ap.controller.CounsellerController             - End login method with dashboard..

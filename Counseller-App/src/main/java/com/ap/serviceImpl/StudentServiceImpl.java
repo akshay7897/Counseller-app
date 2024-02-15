@@ -1,9 +1,11 @@
 package com.ap.serviceImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import com.ap.dtos.SearchCriteria;
@@ -55,8 +57,60 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public List<StudentEnquryResponse> fetchAllEnquries(SearchCriteria searchCriteria) {
-		return null;
+	public List<StudentEnquryResponse> fetchAllEnquries(HttpServletRequest request) {
+		
+		List<StudentEnquryResponse> studentlistResonse=new ArrayList<>();
+		
+		HttpSession session = request.getSession(false);
+		Long consellerKey=(Long)session.getAttribute("cid");
+		Optional<CounsellerInfo> counsellerKey = counsellerRepository.findById(consellerKey);
+		Optional<List<Student>> findByCounsellerKey=Optional.empty();
+		if(counsellerKey.isPresent()) {
+			findByCounsellerKey = studentRepository.findByCounsellerKey(counsellerKey.get());
+		}
+		
+		if(findByCounsellerKey.isPresent()) {
+			for(Student s:findByCounsellerKey.get()) {
+				StudentEnquryResponse studentEnquryResponse=new StudentEnquryResponse();
+				BeanUtils.copyProperties(s, studentEnquryResponse);
+				studentlistResonse.add(studentEnquryResponse);
+			}
+		}
+		
+		return studentlistResonse;
+	}
+
+	@Override
+	public List<StudentEnquryResponse> fetchAllEnquries(SearchCriteria searchCriteria, HttpServletRequest request) {
+		List<StudentEnquryResponse> studentlistResonse=new ArrayList<>();
+		HttpSession session = request.getSession(false);
+		Long consellerKey=(Long)session.getAttribute("cid");
+		Optional<CounsellerInfo> counsellerKey = counsellerRepository.findById(consellerKey);
+		Student student=new Student();
+		student.setCounsellerKey(counsellerKey.get());
+		
+		if (null != searchCriteria.getMode() && !"".equals(searchCriteria.getMode())) {
+			student.setMode(searchCriteria.getMode());
+		}
+		
+		if (null != searchCriteria.getStatus() && !"".equals(searchCriteria.getStatus())) {
+			student.setStatus(searchCriteria.getStatus());
+		}
+		
+		if (null != searchCriteria.getCourse() && !"".equals(searchCriteria.getCourse())) {
+			student.setCourse(searchCriteria.getCourse());
+		}
+		Example<Student> value = Example.of(student);
+		
+		List<Student> studentlist = studentRepository.findAll(value);
+		for(Student student1:studentlist) {
+			StudentEnquryResponse studentEnquryResponse=new StudentEnquryResponse();
+			BeanUtils.copyProperties(student1, studentEnquryResponse);
+			studentlistResonse.add(studentEnquryResponse);
+			
+		}
+		
+		return studentlistResonse;
 	}
 
 }

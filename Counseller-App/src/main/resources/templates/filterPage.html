@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Counseller App</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+	<h1><b><u>View Enquires</u></b></h1>
+
+	<form th:action="@{/serch}" th:object="${serch}" method="post">
+		<table aria-expanded="true">
+			<tr>
+				<td>
+					<label for="course">Course:</label>
+				</td>
+				<td>
+					<select class="form-select" id="course" th:field="*{course}">
+						<option value="">-Select-</option>
+						<option value="Java">Java</option>
+						<option value="Python">Python</option>
+						<option value="DevOps">DevOps</option>
+						<option value="JavaScript">JavaScript</option>
+					</select>
+				</td>
+
+				<td>
+					<label for="mode">Mode:</label>
+				</td>
+				<td>
+					<select class="form-select" id="mode" th:field="*{mode}">
+						<option value="">-Select-</option>
+						<option value="Online">Online</option>
+						<option value="Offline">Offline</option>
+					</select>
+				</td>
+
+				<td>
+					<label for="status">Status:</label>
+				</td>
+				<td>
+
+
+					<select class="form-select" id="status" th:field="*{status}">
+						<option value="">-Select-</option>
+						<option value="Enrolled">Enrolled</option>
+						<option value="Lost">Lost</option>
+					</select>
+				</td>
+
+				<td>
+					<button type="submit" class="btn btn-primary"  >Search</button>
+				</td>
+			</tr>
+		</table>
+
+	</form>
+
+	<table class="table table-borderd">
+		<tr>
+			<th>Name</th>
+			<th>City</th>
+			<th>MobileNo</th>
+			<th>Email</th>
+			<th>Course</th>
+			<th>Mode</th>
+			<th>Status</th>
+		</tr>
+
+		<tr th:each="enquires:${allEnquries}">
+			<td th:text="${enquires.name}" />
+			<td th:text="${enquires.city}" />
+			<td th:text="${enquires.mobileNo}" />
+			<td th:text="${enquires.email}" />
+			<td th:text="${enquires.course}" />
+			<td th:text="${enquires.mode}" />
+			<td th:text="${enquires.status}" />
+		</tr>
+
+
+	</table>
+	<a href="/enqury" style="margin-left: 90%;">Add Enquiry</a>
+
+
+
+
+
+</body>
+
+
+</html>
